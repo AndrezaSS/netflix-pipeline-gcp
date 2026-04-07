@@ -1,3 +1,10 @@
+![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white) 
+![SQL](https://img.shields.io/badge/sql-%2300758F.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=Metabase&logoColor=white)
+![Data Lake](https://img.shields.io/badge/Data_Lake-0080FF?style=for-the-badge&logo=google-cloud-storage&logoColor=white)
+
 # Ingestão de Dados com BigQuery e Metabase: Arquitetura Bronze, Silver e Gold
 
 Este projeto demonstra a construção de um pipeline de dados ponta a ponta, utilizando o dataset do MovieLens para criar uma plataforma de analytics de filmes.
