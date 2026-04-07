@@ -216,7 +216,7 @@ Exemplos de visualizações criadas:
 
 ## 👤 Autora : Andreza Santos
 
-Projeto desenvolvido como parte do **Desafio Técnico 01** da comunidade [**Dados Por Todos**](https://meadow-squid-e0b.notion.site/Desafio-t-cnico-01-Case-real-com-BigQuery-e-Metabase-8f920ba56c5a829e926481d46d4156c4).
+Projeto desenvolvido como parte do **Desafio Técnico 01** da comunidade [**Dados Por Todos**](https://meadow-squid-e0b.notion.site/Desafio-t-cnico-01-Case-real-com-BigQuery-e-Metabase-8f920ba56c5a829e926481d46d4156c4)
 
 ---
 
