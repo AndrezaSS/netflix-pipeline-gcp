@@ -1,6 +1,7 @@
 ![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white) 
 ![SQL](https://img.shields.io/badge/sql-%2300758F.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![BigQuery](https://img.shields.io/badge/Google_BigQuery-4285F4?style=for-the-badge&logo=google-bigquery&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=Metabase&logoColor=white)
 ![Data Lake](https://img.shields.io/badge/Data_Lake-0080FF?style=for-the-badge&logo=google-cloud-storage&logoColor=white)
@@ -210,4 +211,12 @@ Exemplos de visualizações criadas:
 ![alt text](image-10.png)
 ![alt text](image-11.png)
 ![alt text](image-12.png)
+
+---
+
+## 👤 Autora : Andreza Santos
+
+Projeto desenvolvido como parte do **Desafio Técnico 01** da comunidade [**Dados Por Todos**](https://meadow-squid-e0b.notion.site/Desafio-t-cnico-01-Case-real-com-BigQuery-e-Metabase-8f920ba56c5a829e926481d46d4156c4)
+
+---
 
