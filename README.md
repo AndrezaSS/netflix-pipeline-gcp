@@ -1,3 +1,5 @@
+---
+
 ![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white) 
 ![SQL](https://img.shields.io/badge/sql-%2300758F.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
@@ -5,6 +7,8 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=Metabase&logoColor=white)
 ![Data Lake](https://img.shields.io/badge/Data_Lake-0080FF?style=for-the-badge&logo=google-cloud-storage&logoColor=white)
+
+---
 
 # Ingestão de Dados com BigQuery e Metabase: Arquitetura Bronze, Silver e Gold
 
@@ -61,8 +65,6 @@ Transformações:
 
 - Crie um Bucket no Cloud Storage e faça o upload dos arquivos.csv
 
-![alt text](image-13.png)
-
 - Configure uma Service Account com as permissões (BigQuery Data Viewer, BigQuery Job User, Storage Insights Viewer)
 
 2. Crie a camada Bronze pelo Bigquery. Nesta etapa, os dados são ingeridos diretamente do Google Cloud Storage como tabelas externas, mantendo o formato original (todos como STRING).Exemplo: tabela de filmes
@@ -85,11 +87,12 @@ OPTIONS (
 ```
 ![alt text](image.png)
 
-3. Crie a camada Silver (Dimensões e Fatos) - Dimensão Filmes (dim_movies): Extrai o ano de lançamento do título usando Regex e converte os tipos de dados.
+3. Crie a camada Silver (Dimensões e Fatos) - Dimensão Filmes (dim_movies): Extrai o ano de lançamento do título usando Regex e converte os tipos de dados. 
 
-### dim_movies:
+  - dim_movies:
 
 ```
+
 CREATE OR REPLACE TABLE `project-12268d68-4dba-41b8-846.netflix_analytical.dim_movies` AS
 SELECT
   SAFE_CAST(movieId AS INT64) as movie_id,
@@ -100,7 +103,8 @@ SELECT
   
   ```
 
-### fact_ratings:
+  - fact_ratings:
+
 
   ```
   CREATE OR REPLACE TABLE `project-12268d68-4dba-41b8-846.netflix_analytical.fact_ratings` AS
@@ -169,36 +173,27 @@ CREATE OR REPLACE VIEW `project-12268d68-4dba-41b8-846.netflix_analytical.vw_mov
 
 5. Baixe o metabase com docker
 
-```docker run -d -p 3000:3000 --name metabase metabase/metabase```
-
-![alt text](image-4.png)
+```
+docker run -d -p 3000:3000 --name metabase metabase/metabase
+```
 
 6. Conecte o Metabase ao BigQuery
 
-Criei um service account no GCP
+- Criei um service account no GCP:
 
-### Permissões:
+- Permissões:
 
-- BigQuery Data Viewer
-- BigQuery Job User
-- BigQuery Metadata Viewer
-- Storage Insights Viewer
+  - BigQuery Data Viewer
+  - BigQuery Job User
+  - BigQuery Metadata Viewer
+  - Storage Insights Viewer
 
-Estas permissões permitem:
+- Crie uma conexão no Metabase:
 
-- consultar tabelas
-- executar queries
-- acessar metadados
-- ler arquivos do GCS
-
-![alt text](image-5.png)
-
-![alt text](image-6.png)
-
-- No Metabase, acesse o Admin → Banco de dados → Adicionar banco de dados
-- Selecione BigQuery
-- Informe o Project ID e faça upload do Service Account JSON
-- Sincronize: Admin → Banco de dados → Sync database schema
+  - No Metabase, acesse o Admin → Banco de dados → Adicionar banco de dados
+  - Selecione BigQuery
+  - Informe o Project ID e faça upload do Service Account JSON
+  - Sincronize: Admin → Banco de dados → Sync database schema
 
 7. Crie as Questions no metabase (gráficos)
 
